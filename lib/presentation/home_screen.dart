@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
             SvgPicture.asset("assets/images/logo.svg", height: 30),
             const Spacer(),
             const Text(
-              'Jane',
+              'Mike',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w500,
