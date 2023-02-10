@@ -135,13 +135,30 @@ Future acceptDialog(context) {
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Checkbox(
-                              value: isChecked,
-                              activeColor: Theme.of(context).primaryColor,
-                              onChanged: (value) {
-                                set(() => isChecked = value!);
-                              },
+                            Container(
+                              height: 20,
+                              width: 20,
+                              decoration: BoxDecoration(
+                                color: Theme.of(context)
+                                    .primaryColor
+                                    .withOpacity(0.18),
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              child: Checkbox(
+                                value: isChecked,
+                                activeColor: Theme.of(context).primaryColor,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                side: BorderSide.none,
+                                materialTapTargetSize:
+                                    MaterialTapTargetSize.shrinkWrap,
+                                onChanged: (value) {
+                                  set(() => isChecked = value!);
+                                },
+                              ),
                             ),
+                            const SizedBox(width: 5),
                             const Expanded(
                               child: Text(
                                   "Allow my Data to be stored by this Doctor"),
