@@ -1,7 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
 import 'package:patient_data/utils/constants.dart';
 import 'package:qr_flutter/qr_flutter.dart';
@@ -167,9 +166,8 @@ Future acceptDialog(context) {
                                   return Theme(
                                     data: Theme.of(context).copyWith(
                                       colorScheme: ColorScheme.light(
-                                        primary: Theme.of(context).primaryColor, // <-- SEE HERE
+                                        primary: Theme.of(context).primaryColor,
                                       ),
-
                                     ),
                                     child: child!,
                                   );
